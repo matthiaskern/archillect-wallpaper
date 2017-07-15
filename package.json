@@ -1,0 +1,22 @@
+{
+  "name": "archillect-wallpaper",
+  "version": "0.0.1",
+  "description": "Fetch the latest image from archillect.com and set it as wallpaper",
+  "repository": "https://github.com/matthiaskern/archillect-wallpaper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wallpaper",
+    "archillect"
+  ],
+  "author": "Matthias Kern @mkern_",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "isomorphic-fetch": "^2.2.1",
+    "tmp": "0.0.31",
+    "wallpaper": "^2.4.0"
+  }
+}
