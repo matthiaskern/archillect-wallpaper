@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Fetch the latest image from archillect.com and set it as wallpaper",
   "repository": "https://github.com/matthiaskern/archillect-wallpaper",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
