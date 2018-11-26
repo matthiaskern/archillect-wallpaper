@@ -16,7 +16,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "isomorphic-fetch": "^2.2.1",
-    "tmp": "0.0.31",
-    "wallpaper": "^2.4.0"
+    "tmp": "0.0.33",
+    "wallpaper": "^4.1.0"
   }
 }
