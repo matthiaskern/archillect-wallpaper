@@ -52,4 +52,4 @@ module.exports = () =>
     .then(() => {
       console.log('done');
     })
-    .catch(err => console.error);
+    .catch(err => console.error(err));
