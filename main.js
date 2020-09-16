@@ -12,18 +12,16 @@ const createTmpFile = postfix => tmp.fileSync({ postfix });
 const parseForImgSrc = html => {
   const parsed = cheerio.load(html);
   const body = parsed('body');
-  const imageContainer = body.find('#container img').first();
-  const linkContainer = body.find('#container a').first();
-  const imgUrl = 'http://archillect.com/' + linkContainer.text().trim();
-  const thumbSrc = imageContainer.attr('src');
-  const imgSrc = thumbSrc.slice(0, -8) + '1280' + thumbSrc.slice(-4);
-  const img = {
-    imgUrl,
-    thumbSrc,
-    imgSrc
-  };
+
+  const firstPost = body.find('#posts').first().find('a.post')
+  const imgUrl = 'https://archillect.com' + firstPost.attr('href');
+  const firstImage = firstPost.find('img.thumb');
+  const thumbSrc = firstImage.attr('src');
+
+  const imgSrc = thumbSrc.slice(0, -7) + '1280' + thumbSrc.slice(-4);
 
   console.log(`fetching ${imgUrl}`);
+
   return imgSrc;
 };
 
@@ -43,7 +41,7 @@ const writeImgToTmp = ({ url, body }) => {
 };
 
 module.exports = () =>
-  fetch('http://archillect.com/')
+  fetch('https://archillect.com/')
     .then(res => res.text())
     .then(parseForImgSrc)
     .then(fetch)
