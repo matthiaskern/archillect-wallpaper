@@ -1,6 +1,6 @@
 {
   "name": "archillect-wallpaper",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Fetch the latest image from archillect.com and set it as wallpaper",
   "repository": "https://github.com/matthiaskern/archillect-wallpaper",
   "main": "main.js",
